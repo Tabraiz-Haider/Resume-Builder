@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Dynamic Resume Builder</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Dynamic Resume Builder By <br><bold>Th Developer</bold></h1>
+
+        <div class="form-section">
+            <h2>Enter Your Information</h2>
+            <form id="resume-form">
+                <div class="form-group">
+                    <label for="profile-picture">Profile Picture:</label>
+                    <input type="file" id="profile-picture" accept="image/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="full-name">Full Name:</label>
+                    <input type="text" id="full-name" placeholder="Enter your full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" placeholder="Enter your phone number" required>
+                </div>
+                <div class="form-group">
+                    <label for="bio">Bio:</label>
+                    <textarea id="bio" placeholder="Write a short bio about yourself" required></textarea>
+                </div>
+
+                <h3>Experience</h3>
+                <div class="form-group">
+                    <label for="job-title">Job Title:</label>
+                    <input type="text" id="job-title" placeholder="Enter job title" required>
+                </div>
+                <div class="form-group">
+                    <label for="company">Company:</label>
+                    <input type="text" id="company" placeholder="Enter company name" required>
+                </div>
+                <div class="form-group">
+                    <label for="job-description">Job Description:</label>
+                    <textarea id="job-description" placeholder="Enter job description" required></textarea>
+                </div>
+
+                <h3>Education</h3>
+                <div class="form-group">
+                    <label for="school">School/University:</label>
+                    <input type="text" id="school" placeholder="Enter your school/university name" required>
+                </div>
+                <div class="form-group">
+                    <label for="degree">Degree:</label>
+                    <input type="text" id="degree" placeholder="Enter degree" required>
+                </div>
+
+                <button type="button" id="generate-resume">Generate Resume</button>
+                <button type="button" id="download-pdf">Download as PDF</button>
+            </form>
+        </div>
+
+        <div class="resume-preview">
+            <h2>Resume Preview</h2>
+            <div id="resume">
+                <!-- Dynamic resume content will be shown here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
